@@ -1,0 +1,122 @@
+<svg width="800" height="500" viewBox="0 0 800 500"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#B3E5FC"/>
+    </linearGradient>
+
+    <!-- Cloud Animation -->
+    <style>
+      .cloud1 {
+        animation: drift1 40s linear infinite;
+      }
+
+      .cloud2 {
+        animation: drift2 55s linear infinite;
+      }
+
+      .cloud3 {
+        animation: drift3 70s linear infinite;
+      }
+
+      .sun {
+        transform-origin: 650px 100px;
+        animation: rotateSun 40s linear infinite;
+      }
+
+      .birds {
+        animation: fly 18s linear infinite;
+      }
+
+      @keyframes drift1 {
+        from { transform: translateX(-120px); }
+        to   { transform: translateX(820px); }
+      }
+
+      @keyframes drift2 {
+        from { transform: translateX(820px); }
+        to   { transform: translateX(-150px); }
+      }
+
+      @keyframes drift3 {
+        from { transform: translateX(-250px); }
+        to   { transform: translateX(850px); }
+      }
+
+      @keyframes rotateSun {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+
+      @keyframes fly {
+        0% {
+          transform: translate(-200px, 120px);
+        }
+        100% {
+          transform: translate(850px, 60px);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="500" fill="url(#skyGradient)"/>
+
+  <!-- Sun -->
+  <g class="sun">
+    <circle cx="650" cy="100" r="45" fill="#FFD54F"/>
+    <g stroke="#FFD54F" stroke-width="4">
+      <line x1="650" y1="30" x2="650" y2="0"/>
+      <line x1="650" y1="170" x2="650" y2="200"/>
+      <line x1="580" y1="100" x2="550" y2="100"/>
+      <line x1="720" y1="100" x2="750" y2="100"/>
+      <line x1="600" y1="50" x2="575" y2="25"/>
+      <line x1="700" y1="150" x2="725" y2="175"/>
+      <line x1="700" y1="50" x2="725" y2="25"/>
+      <line x1="600" y1="150" x2="575" y2="175"/>
+    </g>
+  </g>
+
+  <!-- Cloud 1 -->
+  <g class="cloud1" fill="white">
+    <circle cx="80" cy="80" r="25"/>
+    <circle cx="110" cy="65" r="35"/>
+    <circle cx="145" cy="80" r="25"/>
+  </g>
+
+  <!-- Cloud 2 -->
+  <g class="cloud2" fill="white">
+    <circle cx="500" cy="140" r="20"/>
+    <circle cx="525" cy="125" r="30"/>
+    <circle cx="560" cy="140" r="20"/>
+  </g>
+
+  <!-- Cloud 3 -->
+  <g class="cloud3" fill="white">
+    <circle cx="250" cy="60" r="22"/>
+    <circle cx="280" cy="45" r="32"/>
+    <circle cx="315" cy="60" r="22"/>
+  </g>
+
+  <!-- Flying Birds -->
+  <g class="birds">
+    <path d="M0 0 Q10 -10 20 0 Q30 -10 40 0"
+          fill="none"
+          stroke="#333"
+          stroke-width="2"/>
+
+    <path d="M70 15 Q80 5 90 15 Q100 5 110 15"
+          fill="none"
+          stroke="#333"
+          stroke-width="2"/>
+
+    <path d="M140 0 Q150 -10 160 0 Q170 -10 180 0"
+          fill="none"
+          stroke="#333"
+          stroke-width="2"/>
+  </g>
+
+</svg>
